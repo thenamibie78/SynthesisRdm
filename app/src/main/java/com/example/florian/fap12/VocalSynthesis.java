@@ -42,7 +42,7 @@ public class VocalSynthesis extends AppCompatActivity implements OnInitListener{
         utteranceId="First";
 
             //TextToSpeed INIT & CONFIGURATION
-            tts = new TextToSpeech(context, ??? ); //Je ne comprend pas le 2ème paramètre
+            tts = new TextToSpeech(context, this ); //Je ne comprend pas le 2ème paramètre
             //SPEAK FUNCTION
             Speak_Return = tts.speak(Spitch, tts.QUEUE_ADD, null, utteranceId);
     }
@@ -54,7 +54,7 @@ public class VocalSynthesis extends AppCompatActivity implements OnInitListener{
         return Stop_error;
     }
 
-    //CETTE FONCTION onInit EST APPARU TOUTE SEULE!!
+    //CETTE FONCTION onInit EST APPARU TOUTE SEULE!! Est elle vraiment utile?
     @Override
     public void onInit(int i) {
         {
