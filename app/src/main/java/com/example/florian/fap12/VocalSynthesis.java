@@ -17,8 +17,8 @@ import java.util.Locale;
 
 public class VocalSynthesis extends AppCompatActivity implements OnInitListener{
 
-    private CharSequence Spitch;
-    private String utteranceId;
+    private CharSequence Spitch; //Le texte a lire
+    private String utteranceId; // ID quelconque pour la fonction speak
     private Integer Speak_Return;
     private Integer Stop_error;
     private Integer result;
@@ -38,28 +38,23 @@ public class VocalSynthesis extends AppCompatActivity implements OnInitListener{
     //PLAY VOCAL
     public void play_vocal(Context context){
         //INIT
-        Spitch = "A constructor resembles an instance method, but it differs from a method in that it has" +
-                " no explicit return type, it is not implicitly inherited and it usually has different rules for scope modifiers. ";
+        Spitch = "Text test test test for read  ";
         utteranceId="First";
 
             //TextToSpeed INIT & CONFIGURATION
-            tts = new TextToSpeech(context, this); //JE NE COMPREND PAS CE DEUXIEME PARAMETRE
-
+            tts = new TextToSpeech(context, ??? ); //Je ne comprend pas le 2ème paramètre
             //SPEAK FUNCTION
             Speak_Return = tts.speak(Spitch, tts.QUEUE_ADD, null, utteranceId);
-
-
-
     }
 
     public Integer getSpeak_Return() {
         return Speak_Return;
     }
-
     public Integer getStop_error() {
         return Stop_error;
     }
 
+    //CETTE FONCTION onInit EST APPARU TOUTE SEULE!!
     @Override
     public void onInit(int i) {
         {
@@ -67,5 +62,4 @@ public class VocalSynthesis extends AppCompatActivity implements OnInitListener{
             if (i== tts.SUCCESS) tts.setLanguage(Locale.UK);
         }
     }
-
 }
