@@ -23,7 +23,6 @@ public class VocalSynthesis extends AppCompatActivity implements OnInitListener{
     private Integer Stop_error;
     private Integer result;
     public TextToSpeech tts;
-    private TextToSpeech.OnInitListener tts_Listener;
 
     //CONSTRUCTOR
     public VocalSynthesis() {
